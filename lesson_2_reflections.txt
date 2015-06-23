@@ -2,7 +2,7 @@ What happens when you initialize a repository? Why do you need to do it?
 
 When I invoke git init to create a repository, a new directory called .git is
 created in the working directory. This directory contains the meta data that is
-need by git.
+needed by git.
 
 ################################################################################
 How is the staging area different from the working directory and the repository?
@@ -25,7 +25,7 @@ changes relevant to a commit. Git forces you into a work flow that includes a
 step for selecting changes because this is vital and requires consideration.
 
 The staging area makes git harder to learn, and requires some additional effort
-form users but it's included because it improves the quality of each reversion
+from users but it's included because it improves the quality of each reversion
 and this outweighs the disadvantages. In fact, seasoned developers using other
 version control systems probably adhere to a work flows that emulates git's
 staging area. They might do their work in a directory separate from the one that
@@ -45,7 +45,7 @@ git commit.
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
-This is my tool for trying stuff out. This lets me keep a seperate history for
+This is my tool for trying stuff out! This lets me keep a seperate history for
 each undertaking I make. Suppose I am refactoring and I realize that some other
 architecture would make everything way better. I could create a branch for this
 improvement and make lots of commits related to this effort without compromising
@@ -63,12 +63,12 @@ possible in git, and this helps me understand how git fits into my work habits.
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-This creates a commit. This commit is different however, because commit has more
-than one parent commit. This combines all the histories together.
+This creates a commit. This commit is different however, because it has more
+than one parent. This combines all the histories together.
 
-I now have a better understanding what git log does. It finds ever commit
+I now have a better understanding what git log does. It finds every commit
 reachable from the currently checked out commit, and lists them in chronological
-order. This means git log interweaves its branches.
+order. This means git log has no regard for branches by default.
 
 ################################################################################
 What are the pros and cons of Git’s automatic merging vs. always doing merges
@@ -76,17 +76,17 @@ manually?
 
 Auto merging
 Pros:
-Makes it easier for me to merge and it can remove the laborious
-task working through both versions and developing a hand crafted merge.
-Merges are fast. When git cannot complete an auto merge it marks the source file
-to show the conflict so that its easier to manually merge.
+Makes it easier for me to merge and it can remove the laborious task of
+comprehending both versions and developing a hand crafted merge. Merges are
+fast. When git cannot complete an auto merge it marks the source file to show
+the conflicts so that its easier to manually merge.
 
 Cons:
 May introduce a bug. It can't handle many common cases.
 
 Manual merging
 Pros:
-Cleaner solution that works better.
+Cleaner solution that works.
 
 Cons:
 Lots of work. Can takes a long time.
