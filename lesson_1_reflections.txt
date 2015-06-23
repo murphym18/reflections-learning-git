@@ -65,19 +65,18 @@ something that is inherently complex, and it makes sense to spend time making it
 as readable, and concise as possible. It sounds absurd to me at face value
 that a line of code should take an hour to write but these are typically lines
 of code written in a functional style, where the logic of many lines of code
-interact. I find myself focused on making sure a critical nexus of code is as
-beautiful, and this means creating functions from sub-expressions. Without
-thinking I cut the sub-expression and paste it into a function body and proceed
-to clean up the newly created function. When I am done cleaning that function I
-habitually save and this creates a revision. The problem with this revision is
-that now incoherent line where I cut that sub-expression. This is a problem
-because that critical nexus of code is where my focus is centered and it sucks
-having to wade through a cluttered history.
+interact. I find myself focused on making sure a critical nexus of code is very
+clear, and this means creating functions from sub-expressions. Without thinking
+I might move a sub-expression into a function and proceed to clean up the newly
+created function. When I'm satisfied with a function I habitually save and this
+creates a revision in some programs. The problem with this revision is
+that now a incoherent line exists where I removed a sub-expression. This is bad
+because that critical nexus of code is where lots of focus is centered so this
+is a place where having am uncluttered history is important.
 
 So for me:
-  1) Manually committing is something I should get in the habit of.
-  2) Auto histories seem convenient at first but they tend to create a cluttered
-     history.
+  1) Manually commits make for a more readable history but require more effort.
+  2) Auto histories are convenient but they tend to create a cluttered history.
 
 ################################################################################
 Why do you think some version control systems, like Git, allow saving multiple
