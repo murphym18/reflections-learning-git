@@ -45,7 +45,7 @@ git commit.
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
-This is my tool for trying stuff out! This lets me keep a seperate history for
+This is my tool for trying stuff out! This lets me keep a separate history for
 each undertaking I make. Suppose I am refactoring and I realize that some other
 architecture would make everything way better. I could create a branch for this
 improvement and make lots of commits related to this effort without compromising
