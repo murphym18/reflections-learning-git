@@ -63,6 +63,13 @@ possible in git, and this helps me understand how git fits into my work habits.
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+This creates a commit. This commit is different however, because commit has more
+than one parent commit. This combines all the histories together.
+
+I now have a better understanding what git log does. It finds ever commit
+reachable from the currently checked out commit, and lists them in chronological
+order. This means git log interweaves its branches.
+
 ################################################################################
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
