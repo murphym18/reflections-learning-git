@@ -1,12 +1,12 @@
 How did viewing a diff between two versions of a file help you see the bug that
 was introduced?
 
-diff is great and using it made finding the bug easier. I need like the
-convention of running diff with the old file before the new one. Maybe a way for
+diff is great and using it made finding the bug easier. I like the convention of
+running diff with the old file before the new one. Maybe a way for
 me to remember the order is to think about it like math. In calculus we always
 considered x and x + dt. The old version is x, and the new one is the old
-version plus some changes. This makes sense since if I think x < (x + dt)
-because smaller numbers appear before larger ones. So I can remember:
+version plus some changes. This makes sense since x < (x + dt) and  smaller
+numbers appear before larger ones. So I can remember:
 
    diff -u old.txt new.txt
 
@@ -27,8 +27,8 @@ and starts each line of file content with one of three characters:
 
 I'm not 100% sure my understanding of the output I described above is correct.
 Furthermore, I not sure I understand what the lines that start with "@@" mean. I
-believe rather certainly that lines starting with "@@" annotate the output with
-the line number where the next line of output is found in each file.
+believe with some certainty that lines starting with "@@" annotate the output
+with the line number where the next line of output is found in each file.
 
 Quick Summary:
 
@@ -69,10 +69,10 @@ interact. I find myself focused on making sure a critical nexus of code is very
 clear, and this means creating functions from sub-expressions. Without thinking
 I might move a sub-expression into a function and proceed to clean up the newly
 created function. When I'm satisfied with a function I habitually save and this
-creates a revision in some programs. The problem with this revision is
-that now a incoherent line exists where I removed a sub-expression. This is bad
-because that critical nexus of code is where lots of focus is centered so this
-is a place where having am uncluttered history is important.
+creates a revision in some programs. The problem with this revision is that now
+an incoherent line exists where I removed a sub-expression. This is bad because
+that line is at a critical nexus of code where lots of focus is centered and
+this a place where having am uncluttered history is especially important.
 
 So for me:
   1) Manually commits make for a more readable history but require more effort.
@@ -82,14 +82,14 @@ So for me:
 Why do you think some version control systems, like Git, allow saving multiple
 files in one commit, while others, like Google Docs, treat each file separately?
 
-It makes sense in software engineering to keep logic in separate files. I make
-an effort to minimize coupling between files, but sometimes this is unavoidable.
-After you reexamine the logic of some code you may find something this is
-fundamentally connected but missing from a function. This kind of refactoring
-often entails changing the arguments for a function and if this is a public
-function it is necessary to change every call to that function. This is why a
-version control system for source code needs to track changes across multiple
-files.
+It makes sense in software engineering to keep logic in separate files and I
+make an effort to minimize coupling between files, but sometimes this is
+unavoidable. After you reexamine the logic of some code you may find something
+that is fundamentally connected but missing from a function. This kind of
+refactoring often entails changing the arguments for a function and if this is a
+public function it is necessary to change every call to that function. This is
+why a version control system for source code needs to track changes across
+multiple files.
 
 ################################################################################
 How can you use the commands git log and git diff to view the history of files?
@@ -113,6 +113,6 @@ the freedom to discover and play.
 Now that you have your workspace set up, what do you want to try using Git for?
 
 I want to be an expert at git so I can take full advantage version control. As
-I work I am not comfortable enough with git to use it for dev tasks. I use it
-mostly as a backup and with the knowlege that if I really need an old version, I
-can google around till I find out how to make git do what I want.
+I work I am not comfortable enough with git to use it to the fullest. I use it
+mostly as a backup and with the knowledge that if I really need an old version,
+I can google around till I find out how to make git do what I want.
