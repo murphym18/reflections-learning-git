@@ -8,13 +8,49 @@ need by git.
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
+Often a subset of changes in the working directory may be a meaningful
+collection of changes that would ideally be recorded in a distinct revision.
+The staging system provides an organized work flow to select the changes to
+commit because doing this manually can be difficult. With the staging system,
+the irrelevant changes in the working directory don't matter as much because all
+changes must be staged before they are committed. Developers can select and
+commit a meaningful sets of changes without mangling their working directory and
+without inappropriate extras.
+
+For people working with big team or on large projects, this probably reduces the
+effort required to make a commit. Thus encouraging them to make more commits.
+In addition, this probably improves the quality of commits because developers
+don't need to setup their working directory so that it exclusively contains
+changes relevant to a commit. Git forces you into a work flow that includes a
+step for selecting changes because this is vital and requires consideration.
+
+The staging area makes git harder to learn, and requires some additional effort
+form users but it's included because it improves the quality of each reversion
+and this outweighs the disadvantages. In fact, seasoned developers using other
+version control systems probably adhere to a work flows that emulates git's
+staging area. They might do their work in a directory separate from the one that
+their version control system uses so they can stage meaningful changes and
+contribute understandable revisions. Git just streamlines this work flow and
+makes it approachable for everyone.
+
 ################################################################################
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+The staging area is a tool for selecting changes before committing them. I can
+select the changes that are logical with git add and then commit them with
+git commit.
+
 ################################################################################
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+
+This is my tool for trying stuff out. This lets me keep a seperate history for
+each undertaking I make. Suppose I am refactoring and I realize that some big
+architectural would make everything way better. I could create a branch for this
+improvement and make lots of commits related to this effort without compromising
+the stability of the master branch or polluting its history with the details of
+this tangential effort.
 
 ################################################################################
 How do the diagrams help you visualize the branch structure?
