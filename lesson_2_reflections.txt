@@ -73,3 +73,20 @@ order. This means git log interweaves its branches.
 ################################################################################
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+Auto merging
+Pros:
+Makes it easier for me to merge and it can remove the laborious
+task working through both versions and developing a hand crafted merge.
+Merges are fast. When git cannot complete an auto merge it marks the source file
+to show the conflict so that its easier to manually merge.
+
+Cons:
+May introduce a bug. It can't handle many common cases.
+
+Manual merging
+Pros:
+Cleaner solution that works better.
+
+Cons:
+Lots of work. Can takes a long time.
