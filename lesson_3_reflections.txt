@@ -44,4 +44,11 @@ their version of the project.
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+When collaborating with others a separate branch is useful. The main branch can
+be updated with merges, fixes and non-feature-changing updates while seperate
+branches can be used to for more complex changes. This is a work flow for
+working with others. I can create pull requests to introduce new features.
+Contributers can review my request and incorporate my changes when their ready.
+Neither the contributer reviewing my work or I need to coordinate beyond that.
+I wonder if this is the work flow that open source projects on GitHub follow. I
+should see about contributing on something.
