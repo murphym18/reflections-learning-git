@@ -55,6 +55,10 @@ a tangential effort.
 ################################################################################
 How do the diagrams help you visualize the branch structure?
 
+I get a sense of the data structures git uses. I see how branches (tracking
+multiple histories) can relate to one another. I begin to understand what's
+possible in git, and this helps me understand how git fits into my work habits.
+
 ################################################################################
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
