@@ -8,8 +8,11 @@ collaboration.
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
-    
+This gives me the opportunity to pull changes from many different places and
+merges them. The merging effort may require multiple commits and it makes sense
+for me to manually pull from each place when I'm ready. Also when working with
+others this is important.
+
 ################################################################################
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
@@ -27,7 +30,7 @@ How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
     Fill in your answer here
-    
+
 ################################################################################
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
