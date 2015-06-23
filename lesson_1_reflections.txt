@@ -1,0 +1,119 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+diff is great and using it made finding the bug easier. I need like the
+convention of running diff with the old file before the new one. Maybe a way for
+me to remember the order is to think about it like math. In calculus we always
+considered x and x + dt. The old version is x, and the new one is the old
+version plus some changes. This makes sense since if I think x < (x + dt)
+because smaller numbers appear before larger ones. So I can remember:
+
+   diff -u old.txt new.txt
+
+I liked her explanation of diff. She said the output at the top specifies the
+files you are comparing. The top part also says which file is associated with
+"+" and which with "-". The body of the output shows the contents of the files
+and starts each line of file content with one of three characters:
+
+ 1) If the first character is " " then the line is the same in each file. These
+    lines make it easier to understand where a change has occurred (provides
+    some pragmatic context).
+
+ 2) If the line starts with a "-" then the line is only present in the first
+    file.
+
+ 3) If the line starts with a "+" then the line is only present in the second
+    file.
+
+I'm not 100% sure my understanding of the output I described above is correct.
+Furthermore, I not sure I understand what the lines that start with "@@" mean. I
+believe rather certainly that lines starting with "@@" annotate the output with
+the line number where the next line of output is found in each file.
+
+Quick Summary:
+
+ 1) diif -u old_file new_file
+ 2) The program shows differences in files.
+ 3) The top of the diff output shows which file is associated with "+" and which
+    with "-".
+ 4) The lines that start with "@@" show me where the next few lines can be found
+    in each file.
+ 5) The lines that start with " " are the same in each file. the lines that
+    start with "+" or "-" are found in only one of the files.
+
+################################################################################
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+I see a number of ways.
+ 1) For cases when a change breaks something that was working previously.
+ 2) I may feel more willing to experiment if I know I can recall an old version.
+ 3) I may gain insight by exploring how some code has evolved.
+ 4) I may feel that coding is a less delicate task, like its more forgiving.
+
+################################################################################
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+I tend to neglect making commits, so I like how some programs auto commit
+versions for me. The problem I have found all to much is that, the changes can
+be hard to follow. I may change one small thing while reading through a bunch of
+code and not realize it. Other times, I may need time to figure something out.
+Sometimes one line of code takes an hour to write. These lines tend to do
+something that is inherently complex, and it makes sense to spend time making it
+as readable, and concise as possible. It sounds absurd to me at face value
+that a line of code should take an hour to write but these are typically lines
+of code written in a functional style, where the logic of many lines of code
+interact. I find myself focused on making sure a critical nexus of code is as
+beautiful, and this means creating functions from sub-expressions. Without
+thinking I cut the sub-expression and paste it into a function body and proceed
+to clean up the newly created function. When I am done cleaning that function I
+habitually save and this creates a revision. The problem with this revision is
+that now incoherent line where I cut that sub-expression. This is a problem
+because that critical nexus of code is where my focus is centered and it sucks
+having to wade through a cluttered history.
+
+So for me:
+  1) Manually committing is something I should get in the habit of.
+  2) Auto histories seem convenient at first but they tend to create a cluttered
+     history.
+
+################################################################################
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+It makes sense in software engineering to keep logic in separate files. I make
+an effort to minimize coupling between files, but sometimes this is unavoidable.
+After you reexamine the logic of some code you may find something this is
+fundamentally connected but missing from a function. This kind of refactoring
+often entails changing the arguments for a function and if this is a public
+function it is necessary to change every call to that function. This is why a
+version control system for source code needs to track changes across multiple
+files.
+
+################################################################################
+How can you use the commands git log and git diff to view the history of files?
+
+Git log will show me a list of the commits. I can go "back in time" to see how
+the  files in the project have changed. This is cool but usually I need to see
+the code that changed and that's why git diff exists. I can use git diff with
+any 2 commit IDs found using git log and see diff output for every file that was
+altered.
+
+################################################################################
+How might using version control make you more confident to make changes that
+could break something?
+
+With git I can be more open to trying things because I can always go back to a
+previous version. This will allow me to become a better coder as I can get
+more feedback by exploring. This would also make coding more fun as this affords
+the freedom to discover and play.
+
+################################################################################
+Now that you have your workspace set up, what do you want to try using Git for?
+
+I want to be an expert at git so I can take full advantage version control. As
+I work I am not comfortable enough with git to use it for dev tasks. I use it
+mostly as a backup and with the knowlege that if I really need an old version, I
+can google around till I find out how to make git do what I want.
